@@ -1,20 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" home-header>
+  <ion-item lines="none" class="search-content">
+    <ion-icon name="search-outline" slot="start" class="search-content_icon-search"></ion-icon>
+    <ion-input placeholder="Rechercher"></ion-input>
+  </ion-item>
+  <ion-icon name="notifications-outline" size="large" class="notification-icon" color="primary"></ion-icon>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="new">
+    <div class="top-container">
+      <h4>Nouveautés</h4>
+      <img src="assets/images/new.png" alt="Nouveautés" class="top-container_img">
+    </div>
+  </ion-grid>
+  <ion-grid class="categories">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <ion-item fill="outline" lines="none" class="ion-no-padding">
+          <ion-icon name="man-outline" slot="start" class="man"></ion-icon>
+          <ion-label class="ion-no-margin">
+            <h4>Hommes</h4>
+            <p>235 articles en ventes</p>
+          </ion-label>
+        </ion-item>
+      </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-slide>
+        <ion-item fill="outline" lines="none" class="ion-no-padding">
+          <ion-icon name="woman-outline" slot="start" class="woman"></ion-icon>
+          <ion-label class="ion-no-margin">
+            <h4>Femmes</h4>
+            <p>235 articles en ventes</p>
+          </ion-label>
+        </ion-item>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-item fill="outline" lines="none" class="ion-no-padding">
+          <ion-icon name="walk-outline" slot="start" class="child"></ion-icon>
+          <ion-label class="ion-no-margin">
+            <h4>Enfants</h4>
+            <p>235 articles en ventes</p>
+          </ion-label>
+        </ion-item>
+      </ion-slide>
+    </ion-slides>
+  </ion-grid>
 </ion-content>
