@@ -11,8 +11,8 @@
     top: 25px;
   }
 }
+
 .new{
-  padding: 20px;
   .top-container{
     background: #f48400;
     height: 160px;
@@ -35,18 +35,21 @@
   }
 }
 .categories{
-  ion-slide{
-    background: #ccc;
-    border-radius: 10px;
+  padding: 20px 0;
+  .category-swiper{
     ion-item{
-      --background: transparent;
+      --background: #e6e6e6;
+      --border-width: 0;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 100%;
       ion-icon{
         font-size: 2.6rem;
-        margin-right: 4px;
+        margin: 8px 4px;
         padding: 3px;
         border-radius: 10px;
         color: #fff;
-        margin-left: 5px;
+        min-width: 30px;
       }
       .man{
         background: #1392b5;
@@ -57,6 +60,78 @@
       .child{
         background: #54a60d;
       }
+      ion-label{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 10px;
+        h4{
+          font-weight: 600;
+        }
+      }
     }
+  }
+}
+.title-popular{
+  display: flex;
+  justify-content: space-between;
+  h4{
+    margin: 0;
+  }
+}
+.popular-swiper{
+  padding: 20px 0;
+  ion-card{
+    height: 250px;
+    margin: 0;
+    ion-card-header{
+      padding: 0;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    ion-card-content{
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      padding: 0;
+      .content{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        background: rgb(255, 255, 255, 77%);
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        padding-left: 5px;
+        border-radius: 8px;
+        overflow: hidden;
+        ion-label{
+          text-align: left;
+          h4, p{
+            font-weight: 700;
+            color: #062e99;
+          }
+          
+        }
+        ion-button{
+          margin: 0;
+          height: 100%;
+          background: #062e99;
+        }
+      }
+    }
+  }
+  .one-card{
+    background: #0c5e04;
+  }
+  .two-card{
+    background: #f48400;
+  }
+  .three-card{
+    background: #1392b5;
   }
 }

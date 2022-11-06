@@ -6,7 +6,7 @@
   <ion-icon name="notifications-outline" size="large" class="notification-icon" color="primary"></ion-icon>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding">
   <ion-grid class="new">
     <div class="top-container">
       <h4>Nouveautés</h4>
@@ -14,36 +14,108 @@
     </div>
   </ion-grid>
   <ion-grid class="categories">
-    <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide>
+    <swiper class="category-swiper" [config]="config">
+      <ng-template swiperSlide>
         <ion-item fill="outline" lines="none" class="ion-no-padding">
           <ion-icon name="man-outline" slot="start" class="man"></ion-icon>
           <ion-label class="ion-no-margin">
             <h4>Hommes</h4>
-            <p>235 articles en ventes</p>
+            <p>235 articles</p>
           </ion-label>
         </ion-item>
-      </ion-slide>
+      </ng-template>
 
-      <ion-slide>
+      <ng-template swiperSlide>
         <ion-item fill="outline" lines="none" class="ion-no-padding">
           <ion-icon name="woman-outline" slot="start" class="woman"></ion-icon>
           <ion-label class="ion-no-margin">
             <h4>Femmes</h4>
-            <p>235 articles en ventes</p>
+            <p>235 articles</p>
           </ion-label>
         </ion-item>
-      </ion-slide>
+      </ng-template>
 
-      <ion-slide>
+      <ng-template swiperSlide>
         <ion-item fill="outline" lines="none" class="ion-no-padding">
           <ion-icon name="walk-outline" slot="start" class="child"></ion-icon>
           <ion-label class="ion-no-margin">
             <h4>Enfants</h4>
-            <p>235 articles en ventes</p>
+            <p>235 articles</p>
           </ion-label>
         </ion-item>
-      </ion-slide>
-    </ion-slides>
+      </ng-template>
+
+    </swiper>
+    
+  </ion-grid>
+
+  <!-- grid populaires-->
+  <ion-grid>
+    <div class="title-popular">
+        <h4>Les plus populaires</h4>
+        <a href="#"> Tout voir </a>
+    </div>
+    
+    <swiper class="popular-swiper" [config]="configPopular">
+      <ng-template swiperSlide>
+        <ion-card class="one-card">
+          <ion-card-header>
+           <img src="assets/images/1.png" alt="">
+          </ion-card-header>
+          <ion-card-content>
+           <div class="content">
+              <ion-label>
+                <h4>Lunette en cercle</h4>
+                <p>14 000 FCFA</p>
+              </ion-label>
+              <ion-button>
+                <ion-icon name="cart"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <ion-card class="two-card">
+          <ion-card-header>
+           <img src="assets/images/2.png" alt="">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="content">
+              <ion-label>
+                <h4>Lunette en cercle</h4>
+                <p>14 000 FCFA</p>
+              </ion-label>
+              <ion-button>
+                <ion-icon name="cart"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <ion-card class="three-card">
+          <ion-card-header>
+           <img src="assets/images/3.png" alt="">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="content">
+              <ion-label>
+                <h4>Lunette en cercle</h4>
+                <p>14 000 FCFA</p>
+              </ion-label>
+              <ion-button>
+                <ion-icon name="cart"></ion-icon>
+              </ion-button>
+            </div>
+            
+          </ion-card-content>
+        </ion-card>
+      </ng-template>
+
+    </swiper>
+
   </ion-grid>
 </ion-content>
